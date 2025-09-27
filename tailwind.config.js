@@ -19,6 +19,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Neon colors
+        black: 'rgb(var(--color-black)/<alpha-value>)',
+        white: 'rgb(var(--color-white)/<alpha-value>)',
+        neonGreen: 'rgb(var(--color-neon-green)/<alpha-value>)',
+        neonPink: 'rgb(var(--color-neon-pink)/<alpha-value>)',
+        electricBlue: 'rgb(var(--color-electric-blue)/<alpha-value>)',
+        neonYellow: 'rgb(var(--color-neon-yellow)/<alpha-value>)',
+        neonPurple: 'rgb(var(--color-neon-purple)/<alpha-value>)',
+
+        // Neutrals
+        slate: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
+
+        // Pinks
+        pink: {
+          50: '#ffe0f0',
+          100: '#ffc2e0',
+          200: '#ff99c9',
+          300: '#ff6bb0',
+          400: '#ff469c',
+          500: '#ff2e9a',
+          600: '#e5218a',
+          700: '#c31470',
+          800: '#970b53',
+          900: '#6c0438',
+        },
+
+        // Legacy color system (keeping for compatibility)
         primary: {
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',
@@ -175,9 +213,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: undefined,
-        body: undefined,
-        mono: undefined,
+        heading: ['Lexend', 'system-ui', 'sans-serif'],
+        body: ['Lexend', 'system-ui', 'sans-serif'],
+        mono: ['Courier', 'monospace'],
         jakarta: ['var(--font-plus-jakarta-sans)'],
         roboto: ['var(--font-roboto)'],
         code: ['var(--font-source-code-pro)'],
@@ -185,10 +223,54 @@ module.exports = {
         'space-mono': ['var(--font-space-mono)'],
       },
       fontWeight: {
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
         extrablack: '950',
       },
       fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+        xl: '20px',
+        '2xl': '24px',
+        '3xl': '30px',
+        '4xl': '36px',
         '2xs': '10px',
+      },
+      borderRadius: {
+        none: '0',
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+        full: '9999px',
+      },
+      spacing: {
+        0: '0',
+        1: '4px',
+        2: '8px',
+        3: '12px',
+        4: '16px',
+        5: '20px',
+        6: '24px',
+        8: '32px',
+        10: '40px',
+      },
+      borderWidth: {
+        none: '0',
+        thin: '1px',
+        thick: '2px',
+      },
+      lineHeight: {
+        xs: '16px',
+        sm: '20px',
+        md: '24px',
+        lg: '28px',
+        xl: '32px',
+        '2xl': '36px',
       },
       boxShadow: {
         'hard-1': '-2px 2px 8px 0px rgba(38, 38, 38, 0.20)',

@@ -3,6 +3,16 @@ import { vars } from 'nativewind';
 
 export const config = {
   light: vars({
+    // Neon colors
+    '--color-neon-green': '0 213 88',
+    '--color-neon-pink': '255 46 154',
+    '--color-electric-blue': '0 194 255',
+    '--color-neon-yellow': '255 230 0',
+    '--color-neon-purple': '164 74 255',
+    '--color-black': '0 0 0',
+    '--color-white': '255 255 255',
+
+    // Legacy primary colors (keeping for compatibility)
     '--color-primary-0': '179 179 179',
     '--color-primary-50': '153 153 153',
     '--color-primary-100': '128 128 128',
@@ -155,6 +165,16 @@ export const config = {
     '--color-indicator-error': '185 28 28',
   }),
   dark: vars({
+    // Neon colors (same for light and dark)
+    '--color-neon-green': '0 213 88',
+    '--color-neon-pink': '255 46 154',
+    '--color-electric-blue': '0 194 255',
+    '--color-neon-yellow': '255 230 0',
+    '--color-neon-purple': '164 74 255',
+    '--color-black': '0 0 0',
+    '--color-white': '255 255 255',
+
+    // Legacy primary colors (keeping for compatibility)
     '--color-primary-0': '166 166 166',
     '--color-primary-50': '175 175 175',
     '--color-primary-100': '186 186 186',
