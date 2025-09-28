@@ -1,10 +1,11 @@
 import { Image } from "expo-image";
-import { Alert, Platform, StyleSheet, TouchableOpacity } from "react-native";
+import { Alert, Platform, StyleSheet } from "react-native";
 
 import { HelloWave } from "@/components/hello-wave";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
+import { Button, ButtonText } from "@/components/ui/button";
 import { Link } from "expo-router";
 
 export default function HomeScreen() {
@@ -23,12 +24,15 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <TouchableOpacity
-          style={styles.neonButton}
+        <Button
+          variant="primary"
+          size="md"
           onPress={() => Alert.alert("Hi", "Hello from the neon button!")}
         >
-          <ThemedText style={styles.buttonText}>Neon Button</ThemedText>
-        </TouchableOpacity>
+          <ButtonText variant="primary" size="md">
+            Neon Button
+          </ButtonText>
+        </Button>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -104,28 +108,6 @@ const styles = StyleSheet.create({
   stepContainer: {
     gap: 8,
     marginBottom: 8,
-  },
-  neonButton: {
-    backgroundColor: "#00D558", // neonGreen
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 8,
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: "#00D558",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
-  },
-  buttonText: {
-    color: "#000000",
-    fontSize: 16,
-    fontWeight: "600",
-    fontFamily: "Lexend-SemiBold",
   },
   reactLogo: {
     height: 178,
