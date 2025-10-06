@@ -19,7 +19,64 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Neon colors
+        // Background and foreground
+        background: 'rgb(var(--color-background)/<alpha-value>)',
+        foreground: 'rgb(var(--color-foreground)/<alpha-value>)',
+        
+        // Green scale (Primary)
+        green: {
+          1: 'rgb(var(--color-green-1)/<alpha-value>)',
+          2: 'rgb(var(--color-green-2)/<alpha-value>)',
+          3: 'rgb(var(--color-green-3)/<alpha-value>)',
+          4: 'rgb(var(--color-green-4)/<alpha-value>)',
+          5: 'rgb(var(--color-green-5)/<alpha-value>)',
+          6: 'rgb(var(--color-green-6)/<alpha-value>)',
+          7: 'rgb(var(--color-green-7)/<alpha-value>)',
+          8: 'rgb(var(--color-green-8)/<alpha-value>)',
+          9: 'rgb(var(--color-green-9)/<alpha-value>)',  // Primary
+          10: 'rgb(var(--color-green-10)/<alpha-value>)',
+          11: 'rgb(var(--color-green-11)/<alpha-value>)',
+          12: 'rgb(var(--color-green-12)/<alpha-value>)',
+        },
+        
+        // Gray scale
+        gray: {
+          1: 'rgb(var(--color-gray-1)/<alpha-value>)',
+          2: 'rgb(var(--color-gray-2)/<alpha-value>)',
+          3: 'rgb(var(--color-gray-3)/<alpha-value>)',
+          4: 'rgb(var(--color-gray-4)/<alpha-value>)',
+          5: 'rgb(var(--color-gray-5)/<alpha-value>)',
+          6: 'rgb(var(--color-gray-6)/<alpha-value>)',
+          7: 'rgb(var(--color-gray-7)/<alpha-value>)',
+          8: 'rgb(var(--color-gray-8)/<alpha-value>)',
+          9: 'rgb(var(--color-gray-9)/<alpha-value>)',
+          10: 'rgb(var(--color-gray-10)/<alpha-value>)',
+          11: 'rgb(var(--color-gray-11)/<alpha-value>)',
+          12: 'rgb(var(--color-gray-12)/<alpha-value>)',
+        },
+        
+        // Blue scale (Info/Accent)
+        blue: {
+          1: 'rgb(var(--color-blue-1)/<alpha-value>)',
+          2: 'rgb(var(--color-blue-2)/<alpha-value>)',
+          3: 'rgb(var(--color-blue-3)/<alpha-value>)',
+          4: 'rgb(var(--color-blue-4)/<alpha-value>)',
+          5: 'rgb(var(--color-blue-5)/<alpha-value>)',
+          6: 'rgb(var(--color-blue-6)/<alpha-value>)',
+          7: 'rgb(var(--color-blue-7)/<alpha-value>)',
+          8: 'rgb(var(--color-blue-8)/<alpha-value>)',
+          9: 'rgb(var(--color-blue-9)/<alpha-value>)',  // Info/Accent
+          10: 'rgb(var(--color-blue-10)/<alpha-value>)',
+          11: 'rgb(var(--color-blue-11)/<alpha-value>)',
+          12: 'rgb(var(--color-blue-12)/<alpha-value>)',
+        },
+        
+        // Legacy neon colors (keeping for compatibility)
+        'neon-green': '#00D558',    // Primary
+        'neon-pink': '#FF2E9A',     // Destructive / Cancel
+        'neon-yellow': '#FFE600',   // Warning / Accent
+        'neon-blue': '#00C2FF',     // Info / Accent
+        'neon-purple': '#A44AFF',   // Tabs / UI
         black: 'rgb(var(--color-black)/<alpha-value>)',
         white: 'rgb(var(--color-white)/<alpha-value>)',
         neonGreen: 'rgb(var(--color-neon-green)/<alpha-value>)',
@@ -213,8 +270,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['Lexend', 'system-ui', 'sans-serif'],
-        body: ['Lexend', 'system-ui', 'sans-serif'],
+        sans: ['Lexend', 'sans-serif'],
+        heading: ['Lexend', 'sans-serif'],
+        body: ['Lexend', 'sans-serif'],
         mono: ['Courier', 'monospace'],
         jakarta: ['var(--font-plus-jakarta-sans)'],
         roboto: ['var(--font-roboto)'],

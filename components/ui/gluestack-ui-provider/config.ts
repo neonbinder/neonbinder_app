@@ -3,12 +3,58 @@ import { vars } from 'nativewind';
 
 export const config = {
   light: vars({
-    // Neon colors
-    '--color-neon-green': '0 213 88',
-    '--color-neon-pink': '255 46 154',
-    '--color-electric-blue': '0 194 255',
-    '--color-neon-yellow': '255 230 0',
-    '--color-neon-purple': '164 74 255',
+    // Background and foreground
+    '--color-background': '0 0 0',    // #000000 - Solid black
+    '--color-foreground': '237 237 237', // #ededed - Light text for black background
+    
+    // Green scale (Primary)
+    '--color-green-1': '249 255 250',     // #f9fffa
+    '--color-green-2': '242 252 243',     // #f2fcf3
+    '--color-green-3': '225 250 228',     // #e1fae4 (50)
+    '--color-green-4': '206 246 210',     // #cef6d2 (100)
+    '--color-green-5': '182 239 189',     // #b6efbd (200)
+    '--color-green-6': '152 230 164',     // #98e6a4 (300)
+    '--color-green-7': '107 217 128',     // #6bd980 (400)
+    '--color-green-8': '0 198 73',        // #00c649 (500)
+    '--color-green-9': '0 213 88',        // #00d558 (600) - Primary
+    '--color-green-10': '0 201 76',       // #00c94c (700)
+    '--color-green-11': '0 133 30',       // #00851e (800)
+    '--color-green-12': '5 64 23',         // #054017 (900)
+    
+    // Gray scale
+    '--color-gray-1': '252 252 253',      // #fcfcfd
+    '--color-gray-2': '249 249 251',      // #f9f9fb
+    '--color-gray-3': '239 240 243',     // #eff0f3
+    '--color-gray-4': '231 232 236',     // #e7e8ec
+    '--color-gray-5': '224 225 230',     // #e0e1e6
+    '--color-gray-6': '216 217 224',     // #d8d9e0
+    '--color-gray-7': '205 206 215',     // #cdced7
+    '--color-gray-8': '185 187 198',     // #b9bbc6
+    '--color-gray-9': '139 141 152',      // #8b8d98
+    '--color-gray-10': '128 130 141',    // #80828d
+    '--color-gray-11': '98 99 108',       // #62636c
+    '--color-gray-12': '30 31 36',        // #1e1f24
+    
+    // Blue scale (Info/Accent)
+    '--color-blue-1': '250 253 255',     // #fafdff
+    '--color-blue-2': '241 251 255',     // #f1fbff
+    '--color-blue-3': '226 245 255',    // #e2f5ff (50)
+    '--color-blue-4': '204 241 255',     // #ccf1ff (100)
+    '--color-blue-5': '179 233 255',     // #b3e9ff (200)
+    '--color-blue-6': '150 221 255',     // #96ddff (300)
+    '--color-blue-7': '109 206 250',     // #6dcefa (400)
+    '--color-blue-8': '0 185 246',       // #00b9f6 (500)
+    '--color-blue-9': '0 194 255',       // #00c2ff (600) - Info/Accent
+    '--color-blue-10': '0 183 243',      // #00b7f3 (700)
+    '--color-blue-11': '0 128 179',      // #0080b3 (800)
+    '--color-blue-12': '0 58 88',        // #003a58 (900)
+    
+    // Legacy neon colors (keeping for compatibility)
+    '--color-neon-green': '0 213 88',    // #00D558 - Primary
+    '--color-neon-pink': '255 46 154',   // #FF2E9A - Destructive / Cancel
+    '--color-electric-blue': '0 194 255', // #00C2FF - Info / Accent
+    '--color-neon-yellow': '255 230 0',  // #FFE600 - Warning / Accent
+    '--color-neon-purple': '164 74 255', // #A44AFF - Tabs / UI
     '--color-black': '0 0 0',
     '--color-white': '255 255 255',
 
@@ -165,12 +211,58 @@ export const config = {
     '--color-indicator-error': '185 28 28',
   }),
   dark: vars({
-    // Neon colors (same for light and dark)
-    '--color-neon-green': '0 213 88',
-    '--color-neon-pink': '255 46 154',
-    '--color-electric-blue': '0 194 255',
-    '--color-neon-yellow': '255 230 0',
-    '--color-neon-purple': '164 74 255',
+    // Background and foreground
+    '--color-background': '0 0 0',    // #000000 - Solid black
+    '--color-foreground': '237 237 237', // #ededed
+    
+    // Green scale (Primary) - Dark theme
+    '--color-green-1': '6 12 7',          // #060c07
+    '--color-green-2': '17 26 18',        // #111a12
+    '--color-green-3': '18 45 23',        // #122d17
+    '--color-green-4': '16 60 26',        // #103c1a
+    '--color-green-5': '21 74 34',        // #154a22
+    '--color-green-6': '29 89 43',        // #1d592b
+    '--color-green-7': '36 106 53',       // #246a35
+    '--color-green-8': '41 126 62',       // #297e3e
+    '--color-green-9': '0 213 88',        // #00d558 (Primary)
+    '--color-green-10': '0 201 76',       // #00c94c
+    '--color-green-11': '26 219 94',      // #1adb5e
+    '--color-green-12': '173 244 183',    // #adf4b7
+    
+    // Gray scale - Dark theme
+    '--color-gray-1': '10 10 12',        // #0a0a0c
+    '--color-gray-2': '24 24 26',        // #18181a
+    '--color-gray-3': '33 34 37',         // #212225
+    '--color-gray-4': '41 41 45',        // #29292d
+    '--color-gray-5': '48 49 54',        // #303136
+    '--color-gray-6': '57 58 64',        // #393a40
+    '--color-gray-7': '70 72 79',        // #46484f
+    '--color-gray-8': '94 96 106',       // #5e606a
+    '--color-gray-9': '108 110 121',     // #6c6e79
+    '--color-gray-10': '121 123 134',    // #797b86
+    '--color-gray-11': '178 179 189',    // #b2b3bd
+    '--color-gray-12': '238 238 240',    // #eeeef0
+    
+    // Blue scale (Info/Accent) - Dark theme (using same values as light for now)
+    '--color-blue-1': '250 253 255',     // #fafdff
+    '--color-blue-2': '241 251 255',     // #f1fbff
+    '--color-blue-3': '226 245 255',    // #e2f5ff (50)
+    '--color-blue-4': '204 241 255',     // #ccf1ff (100)
+    '--color-blue-5': '179 233 255',     // #b3e9ff (200)
+    '--color-blue-6': '150 221 255',     // #96ddff (300)
+    '--color-blue-7': '109 206 250',     // #6dcefa (400)
+    '--color-blue-8': '0 185 246',       // #00b9f6 (500)
+    '--color-blue-9': '0 194 255',       // #00c2ff (600) - Info/Accent
+    '--color-blue-10': '0 183 243',      // #00b7f3 (700)
+    '--color-blue-11': '0 128 179',      // #0080b3 (800)
+    '--color-blue-12': '0 58 88',        // #003a58 (900)
+    
+    // Legacy neon colors (same for light and dark)
+    '--color-neon-green': '0 213 88',    // #00D558 - Primary
+    '--color-neon-pink': '255 46 154',   // #FF2E9A - Destructive / Cancel
+    '--color-electric-blue': '0 194 255', // #00C2FF - Info / Accent
+    '--color-neon-yellow': '255 230 0',  // #FFE600 - Warning / Accent
+    '--color-neon-purple': '164 74 255', // #A44AFF - Tabs / UI
     '--color-black': '0 0 0',
     '--color-white': '255 255 255',
 

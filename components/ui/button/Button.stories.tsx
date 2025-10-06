@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-native-web-vite";
 import { Text, View } from "react-native";
 import { fn } from "storybook/test";
 import { GluestackUIProvider } from "../gluestack-ui-provider";
+import { Heading } from "../heading";
 import { Button, ButtonSpinner, ButtonText } from "./index";
 
 // Simple icon component for demonstration
@@ -281,14 +282,14 @@ export const Disabled: Story = {
 export const SimpleTest: Story = {
   render: () => (
     <View style={{ gap: 16 }}>
-      <Text style={{ fontSize: 18, fontWeight: "bold" }}>Simple Test</Text>
+      <Heading size="lg">Simple Test</Heading>
       <Button variant="primary" size="md">
         <ButtonText variant="primary" size="md">
           Test Button
         </ButtonText>
       </Button>
       <View
-        style={{ padding: 10, backgroundColor: "#f0f0f0", borderRadius: 4 }}
+        style={{ padding: 10, backgroundColor: "#000000", borderRadius: 4 }}
       >
         <Text>This is a test view to verify rendering works</Text>
       </View>
@@ -301,9 +302,9 @@ export const AllVariants: Story = {
   render: () => (
     <View style={{ gap: 16 }}>
       <View style={{ gap: 8 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
+        <Heading size="lg" style={{ marginBottom: 8 }}>
           Solid Variants
-        </Text>
+        </Heading>
         <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
           <Button variant="primary" size="md">
             <ButtonText variant="primary" size="md">
@@ -334,9 +335,9 @@ export const AllVariants: Story = {
       </View>
 
       <View style={{ gap: 8 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
+        <Heading size="lg" style={{ marginBottom: 8 }}>
           Outline Variants
-        </Text>
+        </Heading>
         <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
           <Button variant="outline" size="md">
             <ButtonText variant="outline" size="md">
@@ -362,9 +363,9 @@ export const AllVariants: Story = {
       </View>
 
       <View style={{ gap: 8 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
+        <Heading size="lg" style={{ marginBottom: 8 }}>
           Link Variants
-        </Text>
+        </Heading>
         <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
           <Button variant="link" size="md">
             <ButtonText variant="link" size="md">
@@ -390,9 +391,9 @@ export const AllVariants: Story = {
       </View>
 
       <View style={{ gap: 8 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
+        <Heading size="lg" style={{ marginBottom: 8 }}>
           All Sizes
-        </Text>
+        </Heading>
         <View
           style={{
             flexDirection: "row",

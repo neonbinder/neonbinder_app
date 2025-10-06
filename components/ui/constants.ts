@@ -38,3 +38,9 @@ export const {
   WHITE,
   TRANSPARENT,
 } = COLORS;
+
+// Gray scale colors from design system
+export const GRAY_COLORS = {
+  GRAY_9_LIGHT: "#8b8d98",  // Gray-9 light theme
+  GRAY_9_DARK: "#6c6e79",   // Gray-9 dark theme
+} as const;
